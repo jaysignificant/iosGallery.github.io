@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script>
+    var params  = new URLSearchParams(window.location.search);
+    var code    = params.get('code');
+    var store   = 'https://play.google.com/store/apps/details?id=com.aiphotovideogallery.privatephotogallery';
+
+    if (code) {
+        window.location.href = 'myapp://pair?code=' + code;
+
+        setTimeout(function() {
+            window.location.href = store;
+        }, 2000);
+
+    } else {
+        window.location.href = store;
+    }
+</script>
+</body>
+</html>
